@@ -1,9 +1,8 @@
 const express = require('express')
-const bodyParser = require('body-parser')
-
 const app = express()
 const port = 1337
-//app.use(express.urlencoded({ extended: false }))
+app.use(express.urlencoded({ extended: false }))
+
 app.use(express.static('public'))
 
 app.get('/', (req, res) => {
@@ -12,7 +11,9 @@ app.get('/', (req, res) => {
 app.get('/data', (req, res) => {
     assignment2(req,res,)
 })
-
+app.post('/trackName', (req, res) => {
+    assignment4(req, res,)
+})
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
 })
@@ -27,4 +28,8 @@ function assignment2(req, res) {
         for (i = 1; i <= n; i++) sum += i;
         res.send(sum.toString());
     }
+}
+function assignment4(req, res) {
+    console.log(req.body)
+    res.redirect('/myName.html')
 }

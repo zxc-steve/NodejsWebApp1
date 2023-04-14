@@ -31,6 +31,12 @@
     <Content Include="public\assignment3.js">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="public\assignment4.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\myName.html">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="server.js" />
     <Content Include="package.json" />
     <Content Include="README.md" />
